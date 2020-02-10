@@ -47,7 +47,9 @@ namespace aarhusDevexpress
 
         public List<Uniconta.ClientTools.PluginControl> RegisterControls()
         {
-            var ctrls = new List<Uniconta.ClientTools.PluginControl>();
+            //OBS!!!!!!! you have to tell uniconta which form to open from INSIDE uniconta, when adding the menu item in lokal or main 
+            //add the UniqueName to arguments like so .: 'FormName=MyGridView;' you can also send current record to your control by adding 'SourceType=UseCurrentRecord'
+            List <Uniconta.ClientTools.PluginControl> ctrls = new List<Uniconta.ClientTools.PluginControl>();
             ctrls.Add(new Uniconta.ClientTools.PluginControl() { UniqueName = "MyGridView", PageType = typeof(GridView1), AllowMultipleOpen = false, PageHeader = "Overview of Orders" });
             return ctrls;
         }
